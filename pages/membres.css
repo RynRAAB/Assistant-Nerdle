@@ -1,0 +1,275 @@
+@font-face {
+    font-family: gameplay;
+    src: url(../fonts/gameplay/Gameplay.ttf);
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    height: 87.1167px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 0px 20px;
+}
+
+div.logo {
+    display: grid;
+    grid-template-columns: 217.7px 100%;
+}
+
+div.logo2 {
+    display: flex;
+    align-items: center;
+}
+
+#nerdleLogo p {
+    font-family: gameplay;
+    margin-left: 1vw;
+    margin-top:20px;
+    font-size: 24px;
+    letter-spacing: 1.8px;
+    color: #000;
+}
+
+#nerdleLogo {
+    text-decoration: none;
+}
+
+.logo2:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+
+div.header-box {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+
+.header-box li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-box li a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.header-box li a:hover{
+  color: #5BA18F;   
+}
+
+.header-box li:hover{
+    background-color: rgb(239, 237, 237);
+    border-bottom: 3px solid #000;
+    color: #5BA18F;  
+}
+#page-actu:hover {
+    border-bottom: 3px solid #5BA18F; 
+}
+
+#page-actuelle {
+    color: #5BA18F ;
+    font-weight: bold;
+}
+
+i {
+    font-size: 22px;
+}
+
+
+
+main {
+    height:  1150px;
+    margin: 0;
+    background-color: #d1d0d0;
+    position: relative;
+}
+
+div.bande {
+    position: absolute;
+    margin-top: 80px;
+    background-color:  #5BA18F ;
+    height:450px;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+div.titres{
+    margin: 90px 10px 0px 10px;
+}
+div.titres p{
+    margin: 30px  100px 0px 100px;
+    font-size:1.25rem;
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: "gameplay";
+    margin: 0;
+    font-size: 3em;   
+    word-spacing: 1.1rem;
+    letter-spacing: 9px;
+}
+
+.membres-box{
+    position: absolute;
+    margin-top: 392.5px;
+    width: 100%;
+}
+
+.membre-box {
+    position: relative;
+   
+}
+
+div.photoid{
+    display: flex;
+    justify-content: center;
+}
+
+.photoid .image#mohamed{
+    position: absolute;
+    background: url(../img/portraitMoh.png) center/cover no-repeat;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    border: 22px solid #c6c1c1;
+    border-radius: 100%;
+}
+
+.photoid .image#rayane{
+    position: absolute;
+    background: url(../img/portraitRayane.png) center/cover no-repeat;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    border: 22px solid #c6c1c1;
+    border-radius: 100%;
+}
+
+div.information {
+    background-color: #c6c1c1;
+    border: 1px solid #c6c1c1;
+    margin-top: 137.5px;
+    padding-top: 170px;
+    padding-bottom: 30px;
+    border-bottom-left-radius: 25px ;
+    border-bottom-right-radius: 25px ;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 100%;
+    }
+
+.information h3{
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing:2px;
+    word-spacing: 5px;
+}
+.information h4{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.7rem ;
+}
+
+.information p{
+ text-align: center;
+ margin: 50px 10px 0px 10px ;
+ font-size: 1.3rem;
+}
+
+div.contacts {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+div.contacts li {
+    list-style-type: none;
+    margin: auto 20px auto 20px;
+  
+}
+
+div.contacts li a i{
+    color: black;
+    font-size: 30px;
+}
+
+div.contacts li a i:hover{
+    transform: scale(1.2);
+    color:#870064;
+    transition: 0.3s;
+}
+
+footer{
+    width: 100%;
+    height: 77.4333px;
+    background-color: rgb(28, 26, 26);
+    
+}
+
+div.footer-box {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;    
+}
+
+div.footer-box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 77.4333px;
+}
+
+div.copyright p, 
+div.slogan p{
+    color: #F5F5F5;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+
+@media (max-width:992px)
+{
+    main {
+        height: 1400px;
+    }
+}
+
+@media (max-width:768px)
+{
+    main {
+        height: 2000px;
+    }
+    #rayane-box {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 663px)
+{
+    div.bande {
+        height: 600px;
+    }
+    div.membres-box {
+        margin-top: 542.5px;
+    }
+}

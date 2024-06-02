@@ -1,0 +1,251 @@
+@font-face {
+    font-family: gameplay;
+    src: url(../fonts/gameplay/Gameplay.ttf);
+}
+
+/*body{
+    height: 100%;
+    margin: 0;
+    background-color: red;
+}*/
+
+header {
+    height: 87.1167px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 0px 20px;
+}
+
+div.logo {
+    display: grid;
+    grid-template-columns: 217.7px 100%;
+}
+
+div.logo2 {
+    display: flex;
+    align-items: center;
+}
+
+#nerdleLogo p {
+    font-family: gameplay;
+    margin-left: 1vw;
+    margin-top:20px;
+    font-size: 24px;
+    letter-spacing: 1.8px;
+    color: #000;
+}
+
+#nerdleLogo {
+    text-decoration: none;
+}
+
+.logo2:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+div.header-box {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+
+.header-box li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-box li a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.header-box li a:hover{
+  color: #5BA18F;   
+}
+
+.header-box li:hover{
+    background-color: rgb(239, 237, 237);
+    border-bottom: 3px solid #000;
+    color: #5BA18F;  
+}
+#page-actu:hover {
+    border-bottom: 3px solid #5BA18F; 
+}
+
+#page-actuelle {
+    color: #5BA18F ;
+    font-weight: bold;
+}
+
+i {
+    font-size: 22px;
+}
+
+main{
+    height: 100%;
+    margin: 0;
+    padding: 50px 50px;
+    background-color: #D1D0D0;
+}
+
+#grand-titre {
+    font-family: gameplay;
+    text-align: center;
+    font-size: 3rem;
+    background-color:  #5BA18F;
+    border-radius: 20px;
+    padding: 50px 10px;
+    margin-top: 10px;
+    margin-bottom: 130px;
+    color: white;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+div.texte p{
+    text-align: justify;
+    text-indent: 2%;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img{
+    width: 80%;
+    margin: 20px;
+}
+
+h1.titre {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 520;
+    font-size: 2.2rem;
+
+}
+
+div.contenu h1{
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    min-height: 90px;
+    background-color: #880265;
+    border-radius: 15px;
+    box-shadow:-5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.texte{
+    margin-top: 40px;
+  
+}
+div.texte p{
+    font-size: 25px;
+}
+.contenu{
+    margin-top: 70px;
+    font-size: 25px;
+}
+
+.scroll-image {
+    overflow: scroll;
+    width: 100%;
+    height: 180px;
+}
+
+figcaption#image2{
+    text-align: center;
+}
+
+a#mot-cle{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#couleur{
+    float: left;
+}
+ul#couleurs li{
+    list-style-type: square;
+    font-size: 1.3rem;
+}
+
+li#vert:hover{
+    color: #398874;
+}
+
+li#noir:hover{
+    color: #161803;
+}
+
+li#rouge:hover{
+    color: #820458;
+}
+
+img.video{
+    float: right;
+    margin-top: 20px;
+    margin-left:  5%;
+    margin-bottom: 20px;
+    width: 500px;
+}
+img.video-resp{
+    display:none;
+}
+
+p#titre-video{
+    font-weight: 520;
+}
+
+@media (max-width:992px) {
+    img.video{
+        display: none;
+    }
+    img.video-resp{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+footer{
+    width: 100%;
+    height: 77.4333px;
+    background-color: rgb(28, 26, 26);
+}
+
+div.footer-box {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;    
+}
+
+div.footer-box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 77.4333px;
+}
+
+div.copyright p, 
+div.slogan p{
+    color: #F5F5F5;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+

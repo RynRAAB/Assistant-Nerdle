@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css" href="algorithme.css">
+    <link rel="shortcut icon" href="../img/logoNerdle.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+    <title>Explication de l'algorithme - Nerdle</title>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+           <div class="logo2">
+                <a href="../index.html"> <img src="../img/logoNerdle.png" alt="logo de nerdle" width="68" ></a>
+                <a href="../index.html" id="nerdleLogo"><p>Nerdle</p></a>
+           </div>
+           <div></div>
+        </div>
+        <div class="header-box">
+            <li><a href="../index.html"><i class="fa-solid fa-house"></i> &nbsp;Accueil</a></li>
+            <li><a href="projet.html"><i class="fa-solid fa-diagram-project"></i> &nbsp;Projet</a></li>
+            <li id="page-actu"><a id="page-actuelle" href="algorithme.html"><i class="fa-solid fa-code"></i> &nbsp;Algorithme</a></li>
+            <li><a  href="membres.html"><i class="fa-solid fa-user-group"></i> &nbsp;Membres</a></li>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="col-12">
+                <h1 id="grand-titre">Explication de notre algorithme</h1>
+            </div>
+            
+
+            <div class="col-12 presentation">
+                <h1 class="titre">1. Notre algorithme : notions et idées générales </h1>
+                <div class="text">
+                    <p>En premier lieu, on commence par expliquer le deroulement général de notre algorithme, on va essayer de bien eclaircir toutes nos idées utilisés pour le fonctionnement de notre assistant et pour la résolution du Nerdle.</p>
+                    <p>Donc, pour commencer, notre programme contient en entrée une chaine de caractères contenant les chiffres autorisés et une equation incomplète qui contient des points, chiffres et des operateurs, Et le but c’est de pouvoir remplacer ces points par les chiffres autorisés de sorte à utiliser tous ces chiffres et obtenir des equations completes et correctes en sortie. </p>
+                    <p>C’est pour ça qu’on va utiliser une fonction qui génére toutes les permutations possibles d’un ensemble de chiffres, cet ensemble est l'ensemble des chiffres autorisés, et ces permutations générés doivent avoir la même taille que le nombre de points présents dans l’équation incomplète.</p>
+                    <p>Pour mieux comprendre ça, voici un exemple du résultat de génération de toutes les permutations possibles de taille 3 en prenant la chaine &nbsp;"123"&nbsp; comme chaine des chiffres autorisés, </p> 
+                </div>
+                <figure class="scroll-image">
+                    <img src="./../img/exemple_execution3.png" alt="génération de permutations de chiffres">
+                </figure>
+                <figcaption class="a_centrer"> <strong> Image 1 &nbsp;:</strong> &nbsp;exemple de génération de permutations d'un ensemble de chiffres.</figcaption>
+                <div class="text">
+                    <p>Ensuite, après chaque permutation générée, On va faire appel à une fonction qui s’occupe de la combinaison d'une équation incomplète avec une permutation de chiffres, par exemple en lui mettant en entrée la permutation &nbsp;"123"&nbsp; et l’équation  incomplète &nbsp;".+.=."&nbsp;, on aura en sortie une équation complète qui est &nbsp;"1+2=3". Mais cette equation complète peut être correcte comme elle peut ne pas l'être, et c’est pour cela qu’on va appeler une autre fonction qui va se servir de la commande &nbsp;«bc»&nbsp; pour vérifier si cette équation complete est correcte ou pas. Puis, si elle est valide on vérifie que tous les chiffres autorisés y sont présents, si c’est le cas on va l’afficher, si non on fait rien et on passe à la permutation suivante…; Après, on va suivre le même procéssus jusqu’à ce qu'on atteigne la dernière permutation et que l'on s'arrête.</p>
+                    <p>En deuxième lieu, après avoir développer notre algorithme, il suffit juste de mettre en entrée du programme deux chaines de caractères qui contiennent les chiffres et les opérateurs autorisés pour avoir en sortie toutes les opérations et les résolutions possibles pour cette partie de Nerdle.</p>
+                    <p>Et pour procéder jusqu'à ça, on a mis en place une fonction génératrice d'équations incompletes, puis pour chaque équation générée on va vérifier sa validité en s'assurant qu'il n'y a pas deux opérateurs qui se suivent, que l'équation se commence et se finit par un point, que tous les opérateurs autorisés sont utilisés dans cette équation et qu'il en manque pas un seul, et si cette équation est valide on a juste à la considérer comme une entrée dans le programme de notre première version en plus des chiffres autorisés pour générer toutes les solutions possibles avec cette équation. Et on suit le même processus jusqu’à ce qu'on parcoure toutes les équations possibles.</p>
+                    <p>L'image suivante illustre un exemple de génération d'équations de taille 5 caractères contenant les opérateurs &nbsp;"+=", après chaque équation on aura un zéro ou un un qui représente le résultat d'éxecution de la fonction qui vérifie la validité de cette equation, un zéro signifie "faux" et un c'est "vrai",</p>
+                </div>
+                <figure class="scroll-image">
+                    <img src="./../img/exemple_execution4.png" alt="génération d'équations">
+                </figure>
+                <figcaption class="a_centrer"><strong>Image 2 &nbsp;: </strong>&nbsp;exemple de génération d'équations de taille 5.</figcaption>
+            </div>
+
+            <div class="row presentation">
+                <h1 class="titre">2. Quelques détails et approfondissements sur notre algorithme :</h1>
+                <h2 class="petit-titre" id="petit-titre">2.1. Les bibliothèques utilisés :</h2>
+                <div class="col-12 col-md-8 bib">
+                    <div class="text">
+                        <p>Dans l'ensemble, notre algorithme résolateur du jeu Nerdle écrit et programmé en C++ utilise 5 bibliothèques principales, ces bibliothèques sont les suivantes :</p>
+                    <ul class="biblios-liste">
+                        <li><strong>iostream &nbsp;:&nbsp; </strong>c'est la bibliothèque principale du C++ qui s'occupe de toutes forme d'affichage utilisé dans le programme.</li>
+                        <li><strong>cstdio &nbsp;:&nbsp; </strong>on utilise cette bibliothèque pour pouvoir lancer la commande linux «bc» depuis un programme C++.</li>
+                        <li><strong>cstring &nbsp;:&nbsp; </strong>cette bibliothèque nous permet de manipuler les différentes permutations du programme stockées sous forme de pointeurs vers un tableau de caractères.</li>
+                        <li><strong>string &nbsp;:&nbsp; </strong>c'est la bibliothèque standard du C++ qui nous permet de manipuler les chaines de caractères dans notre programme.</li>
+                    </ul>
+                    </div>
+                    <figure id="a_centrer1">
+                        <img src="./../img/biblios.png" alt="bibliothèques">
+                        <figcaption><strong>Image 3 &nbsp;:&nbsp; </strong>bibliothèques utilisées.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-4 image-bib">
+                    <figure id="a_centrer">
+                        <img src="./../img/biblios.png" alt="bibliothèques" width="450" id="bib">
+                        <figcaption><strong>Image 3 &nbsp;:&nbsp; </strong>bibliothèques utilisées.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <h2 class="petit-titre">2.2. Quelques fonctions de notre programme :</h2>
+            <div class="col-12">
+                <p class="text"><strong>Comme premier exemple,</strong> on vous présente le code utilisé pour notre fonction qui s'occupe de vérifier la validité des équations générées, puisque on sait déjà qu'une bonne équation valide se commence et se finit toujours par des points, donc on va faire en sorte de permuter et de générer toutes les combinaisons possibles d'opérateurs et de points au milieu, puis on va vérifier la validité de cette mi-équation, et si elle est valide on va lui rajouter un point des deux cotés (gauche et droite).</p>
+                <figure class="scroll-image">
+                    <img src="./../img/fonction1.png" alt="fonction vérificative de la validité d'une équation générée">
+                </figure>
+                <figcaption class="a_centrer"><strong>Image 4 &nbsp;:&nbsp; </strong>code C++ de la fonction vérificative de la validité d'une équation générée.</figcaption>
+                <div class="text">
+                    <p>Donc, cette fonction vérifie un ensemble de conditions qui doivent être réunis pour former une bonne équation, et parmi ces conditions on a :</p>
+                    <ul class="exemples">
+                        <li>Le dernier opérateur de la mi-équation doit être l'opérateur égale (=).</li>
+                        <li>Aucune suite de caractères consécultifs dans la mi-équation.</li>
+                        <li>Utilisation de tous les opérateurs autorisés une et une seule fois dans la mi-équation.</li>
+                    </ul>
+                    <p><strong>Comme deuxième exemple,</strong> on vous présente le code utilisé dans la fonction qui s'occupe d'éxecuter la commande linux bc depuis un programme C++, cette commande nous permet de tester si une équation mathématique quelconque est vraie ou fausse en utilisant une syntaxe spéciale, par exemple en essayant avec (echo "1+2==3" | bc) on aura en sortie 1 (vrai), mais en essayant avec (echo "1+2==2" | bc) on aura 0 (faux), et ça va être cette fonction qu'on va utiliser pour vérifier la validité des différentes équations produites par la combinaison des équations incompletes avec les permutations de chiffres générées. Son code est le suivant,</p>
+                </div>
+                <figure class="scroll-image">
+                    <img src="./../img/fonction2.png" alt="fonction éxecutative de la commande bc">
+                </figure>
+                <figcaption class="a_centrer"><strong>Image 5 &nbsp;:&nbsp; </strong>code C++ de la fonction vérificative de la validité d'un resultat d'equation par la commande "bc"</figcaption>
+                <p class="text">Donc, cette fonction commence d'abord par vérifier qu'il n y ait pas de dévision sur 0 dans l'équation en entrée pour éviter l'affichage des erreurs standards de la commande bc dans notre terminal dues à la division sur 0. Puis on crée une chaine de caractères qui contient la commande bc à éxecuter, et on va créer un flux de lécture qui va lire le résultat d'éxecution de cette commande et le stocker dans une certaine variable pour renvoyer à la fin le premier caractère de cette variable qui est soit 0 ou bien 1, de tel que le 0 signifie que l'équation est fausse, et le 1 signifie le contraire.</p>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-box">
+            <div class="ualogo">
+                <a href="https://www.univ-angers.fr/fr/index.html"><img src="../img/logoua.png" alt="Université d'Angers" id="logoUA" width="150"></a>
+            </div>
+            <div class="copyright">
+                <p>Nerdle © 2023</p>
+            </div>
+            <div class="slogan">
+                <p>Progresser en calcul mental et s'ammuser simultanément !</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

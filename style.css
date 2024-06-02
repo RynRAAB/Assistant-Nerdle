@@ -1,0 +1,203 @@
+@font-face {
+    font-family: gameplay;
+    src: url(./fonts/gameplay/Gameplay.ttf);
+}
+
+header {
+    height: 87.1167px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 0;
+    box-shadow: 0.5px 4px 7px whitesmoke;
+    position: relative;
+    width: 100%;
+}
+
+div.logo {
+    display: grid;
+    grid-template-columns: 217.7px 100%;
+    margin-left: 20px;
+}
+
+div.logo2 {
+    display: flex;
+    align-items: center;
+}
+
+#nerdleLogo p {
+    font-family: gameplay;
+    margin-left: 1vw;
+    margin-bottom: 18px;
+    font-size: 24px;
+    letter-spacing: 1.8px;
+    color: #000;
+}
+
+#nerdleLogo {
+    text-decoration: none;
+}
+
+.logo2:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+
+div.header-box {
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+
+div.header-box li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div.header-box li a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+
+div.header-boxli a:hover{
+  color: #5BA18F;    
+}
+
+div.header-box li:hover{
+    background-color: rgb(239, 237, 237);
+    border-bottom: 3px solid #000;
+    color: #5BA18F;  
+}
+#page-actu:hover{
+    border-bottom: 3px solid #5BA18F; 
+}
+
+#page-actuelle {
+    color: #5BA18F ;
+    font-weight: bold;
+}
+
+i {
+    font-size: 22px;
+}
+
+body {
+    margin: 0;  
+}
+
+main {
+    height: 85vh;
+    background: #0d1a2d;
+    width: 100%; 
+}
+
+.main-box{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+}
+
+.icons{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(18,5.5%);
+    
+}
+div.icons span{
+    text-align: center;
+}
+div.icons span i{
+    position: relative;
+    font-size: 60px;
+    color: #398874;
+    text-shadow: 0 0 10px #398894,
+    0 0 50px #398874,
+    0 0 60px #3d907b,
+    0 0 70px #419883,
+    0 0 80px #398894,
+    0 0 100px #3d937e,
+    0 0 120px #398874;
+    animation: icon 100s linear infinite;
+    animation-duration: calc(40s/var(--i));
+}
+
+div.icons span:nth-child(even) i{
+    color:#880245;
+    text-shadow: 0 0 5px #880245,
+    0 0 10px #880245,
+    0 0 40px #890657,
+    0 0 70px #890f69,
+    0 0 100px #8b1e6e,
+    0 0 40px #892c65,
+    0 0 70px #7f386c,
+    0 0 100px #824c73;
+}
+    
+
+@keyframes icon {
+        0%{
+            transform: translateY(0vh) ;
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(80vh);
+            opacity: 0.4;
+        }
+}
+
+h1{
+    text-shadow: 5px 5px 10px #F5F5F5;
+    color: #F5F5F5;
+    text-align: center;
+    font-family: gameplay;
+    margin: 20px 0;
+}
+
+
+h1#grand-titre {
+    font-size: 5rem;
+    word-spacing: 1.8rem;
+    letter-spacing: 10px;
+}
+
+h1#petit-titre {
+    font-size : 2.1rem;
+    word-spacing: 1rem;
+    letter-spacing: 7px;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 77.4333px;
+    background-color: rgb(28, 26, 26);
+}
+
+
+div.footer-box {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;    
+}
+
+div.footer-box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 77.4333px;
+}
+
+div.copyright p, 
+div.slogan p{
+    color: #F5F5F5;
+    font-size: 14px;
+    font-family: sans-serif;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css" href="projet.css">
+    <link rel="shortcut icon" href="../img/logoNerdle.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+    <title>Présentation du projet - Nerdle</title>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+           <div class="logo2">
+                <a href="../index.html"> <img src="../img/logoNerdle.png" alt="logo de nerdle" width="68" ></a>
+                <a href="../index.html" id="nerdleLogo"><p>Nerdle</p></a>
+           </div>
+           <div></div>
+        </div>
+        <div class="header-box">
+            <li><a href="../index.html"><i class="fa-solid fa-house"></i> &nbsp;Accueil</a></li>
+            <li id="page-actu"><a href="projet.html" id="page-actuelle"><i class="fa-solid fa-diagram-project"></i> &nbsp;Projet</a></li>
+            <li><a href="algorithme.html"><i class="fa-solid fa-code"></i> &nbsp;Algorithme</a></li>
+            <li><a  href="membres.html"><i class="fa-solid fa-user-group"></i> &nbsp;Membres</a></li>
+        </div>
+    </header>
+    <main>
+        <div class="container">    
+            <div class="col-12">
+                <h1 id="grand-titre">Presentation de notre projet</h1>
+            </div>
+            <div class="col-12 contenu">
+                <h1 class="titre">1. Notre projet : L'ultime version du Nerdle</h1>
+                    <div class="texte">
+                        <p>Le jeu <a id="mot-cle" href="https://www.nerdlegame.com/index.html?loaded=1">Nerdle</a> est un jeu de calcul mental, c'est un jeu mathématique qui consiste à résoudre un casse-tête sous forme d'une équation valide contenant des nombres de 0 jusqu'à 9 (0, 1, 2, 3, ...,8 ,9) et des opérateurs (+, -,* , /, =). Cette équation doit être cachée et invisible au début du jeu, et elle va être l'énigme à deviner au fur et à mesure de la partie. C'est une récente création qui a été lancée l'année dernière par le célèbre data scientist Richard Mann.</p>
+                        <p>Notre projet consiste à offrir aux joueurs de ce jeu un assistant Nerdle qui va lui donner un coup de main pour la résolution du casse-tête, et cela tout en mettant en entrée la structure de l'équation dont les operateurs sont connus et bien placés et dont chaque point représente un chiffre quelconque, et une chaine contenant des chiffres autorisés à utiliser dans cette équation. Puis, notre assistant va s'occuper de la résolution de ce probleme tout en générant l'ensemble des solutions possibles pour cette équation.</p>
+                        <p>Pour mieux comprendre notre projet, voici un extrait de notre programme qui contient un exemple d'exécution dans un terminal Linux, où notre assistant résoud plusieurs équations, dans chaqu'une de ces équation, il doit remplacer chaque point '.' par un chiffre parmi les chiffres autorisés de sorte que tous les chiffres autorisés soient utilisés et l'équation en sortie soit correcte .</p>
+                        <figure>
+                            <img src="../img/exemple_execution.png" alt="exemple d'execution de la première version du programme" >
+                            <figcaption><strong>Image 1 &nbsp;: </strong> &nbsp;exécution de la première version de notre projet</figcaption>
+                        </figure>
+                        <p>D'une autre part, après une légère amélioration sur notre assistant nerdle dans sa deuxième version, notre projet pourrait ensuite aider le joueur à résoudre la partie rien qu'en mettant en entrée une chaine contenant les operateurs valides, et une autre chaine contenant les chiffres autorisés à utiliser dans l'équation comme l'illustre l'exemple suivant.</p>
+                        <figure class="scroll-image">
+                                <img src="../img/exemple_execution2.png" alt="exemple d'execution de la deuxième version du programme">
+                        </figure>
+                        <figcaption id="image2"><strong>Image 2 &nbsp;: </strong> &nbsp;exécution de la deuxième version de notre projet</figcaption>
+                    </div>
+            </div>
+
+            <div class="col-12 contenu">
+                <h1 class="titre">2. Comment se joue le Nerdle ? Comment fonctionne notre projet ?</h1>
+                <div class="texte">
+                    <p>En général, le jeu Nerdle est très simple à jouer, il consiste à deviner une équation mathématique correcte cachée au début de la partie au bout de 6 tentatives, Les tentatives doivent être des equations correctes (on ne peut pas tenter de trouver l'équation cachée qui est correcte en utilisant une equation incorrecte), après chaque tentative, les couleurs des chiffre/opérateurs changent en trois couleurs diffèrentes de sorte à se faire rapprocher du résultat correct, Les trois couleurs sont les suivantes : </p>
+                    <img class="video" src="../img/nerdle-explainer.gif" alt="vidéo explicative du jeu de nerdle"> 
+                    <ul id="couleurs">
+                        <li id="vert"><strong>Vert : </strong>pour un chiffre/opérateur bien placé.</li>
+                        <li id="rouge"><strong>Rouge :</strong> pour un chiffre/opérateurs présent dans l'équation finale, mais mal placé.</li>
+                        <li id="noir"><strong>Noir : </strong>pour un chiffre/opérateur inexistant dans l'équation finale.</li>
+                    </ul>                          
+                    <p id="titre-video">La vidéo suivante explique parfaitement et simplement le déroulement d'une partie Nerdle :</p>
+                    <img class="video-resp" src="../img/nerdle-explainer.gif" alt="vidéo explicative du jeu de nerdle"> 
+                    <p>En utilisant notre projet, on peut résoudre la partie en utilisant les équations générés intelligemment, et cela se fait en deux étapes, premièrement faut compiler notre programme c++ en utilisant la commande g++ dans un terminal linux, puis il faut l'exécuter en mettant en entrée le nom de l'exécutable en premier, la structure de l'equation ou la chaine des opérateurs en deuxième, et la chaine des chiffres autorisés à utiliser dans l'equation en troisième. Toute execution différente de celle-ci affichera une erreur bien détaillée.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-box">
+            <div class="ualogo">
+                <a href="https://www.univ-angers.fr/fr/index.html"><img src="../img/logoua.png" alt="Université d'Angers" id="logoUA" width="150"></a>
+            </div>
+            <div class="copyright">
+                <p>Nerdle © 2023</p>
+            </div>
+            <div class="slogan">
+                <p>Progresser en calcul mental et s'ammuser simultanément !</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
